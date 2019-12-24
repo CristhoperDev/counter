@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget{
   final TextStyle textStyle = new TextStyle(fontSize: 25);
+  final int count = 10;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class HomePage extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text('Number of clicks:', style: textStyle),
-            Text('0', style: textStyle),
+            Text('$count', style: textStyle),
           ],
         ),
       ),
@@ -23,6 +24,7 @@ class HomePage extends StatelessWidget{
         child: Icon(Icons.add),
         onPressed: () {
           print('Hola mundo');
+          //count++;
         },
       ),
     );
