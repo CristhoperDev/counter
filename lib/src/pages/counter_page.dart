@@ -35,28 +35,31 @@ class _CounterPageState extends State {
         SizedBox(width: 30),
         FloatingActionButton(
           child: Icon(Icons.exposure_zero),
-          onPressed: () {
-            setState(() {
-            });
-          },
+          onPressed: _reset
         ),
         Expanded(child: SizedBox()),
         FloatingActionButton(
           child: Icon(Icons.remove),
-          onPressed: () {
-            setState(() {
-            });
-          },
+          onPressed: _remove
         ),
         SizedBox(width: 5.0),
         FloatingActionButton(
           child: Icon(Icons.add),
-          onPressed: () {
-            setState(() {
-            });
-          },
+          onPressed: _add
         )
       ],
     );
+  }
+
+  void _add() {
+    setState(() => _count++);
+  }
+
+  void _remove() {
+    setState(() => _count--);
+  }
+
+  void _reset() {
+    setState(() => _count = 0);
   }
 }
